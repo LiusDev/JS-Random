@@ -51,7 +51,7 @@ export default function Home(props) {
         <div className={`fixed w-screen h-screen transition-all duration-1000 ${!startBtnShow ? 'bg-black/70' : ''}`} />
         <div className='min-w-[600px] flex flex-col items-center bg-neutral-50 px-20 py-6 rounded-3xl shadow-2xl z-10'>
           {/* <h1 className='font-bold text-5xl text-neutral-900'>{props.title}</h1> */}
-          <img src='/title.png' alt='Lucky Number'></img>
+          <img src='/title.png' alt='Lucky Number' className='h-[120px]'/>
           <div className={`rounded-full w-32 h-32 bg-fuchsia-600 flex items-center justify-center my-10 shadow-xl transition-all duration-1000 ${showResult ? 'zoom-in-out-box' : ''}`}>
             <span
               className={`text-5xl font-semibold text-neutral-50 flex items-center justify-center`}
