@@ -14,7 +14,6 @@ export default function Home(props) {
   const [startBtnShow, setStartBtnShow] = useState(true);
 
   const handleRanDom = (start) => {
-    //change number every 100ms
     if(start){
       setStartBtnShow(!startBtnShow);
       setShowResult(false);
@@ -50,9 +49,10 @@ export default function Home(props) {
       )}
       <main className='backdrop-blur-sm min-h-screen flex items-center justify-center'>
         <div className={`fixed w-screen h-screen transition-all duration-1000 ${!startBtnShow ? 'bg-black/70' : ''}`} />
-        <div className='min-w-[600px] flex flex-col items-center bg-neutral-50 px-20 py-10 rounded-3xl shadow-2xl z-10'>
-          <h1 className='font-bold text-5xl text-neutral-900'>{props.title}</h1>
-          <div className='rounded-full w-32 h-32 bg-fuchsia-600 flex items-center justify-center my-8 shadow-xl'>
+        <div className='min-w-[600px] flex flex-col items-center bg-neutral-50 px-20 py-6 rounded-3xl shadow-2xl z-10'>
+          {/* <h1 className='font-bold text-5xl text-neutral-900'>{props.title}</h1> */}
+          <img src='/title.png' alt='Lucky Number'></img>
+          <div className={`rounded-full w-32 h-32 bg-fuchsia-600 flex items-center justify-center my-10 shadow-xl transition-all duration-1000 ${showResult ? 'zoom-in-out-box' : ''}`}>
             <span
               className={`text-5xl font-semibold text-neutral-50 flex items-center justify-center`}
             >
